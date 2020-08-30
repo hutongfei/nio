@@ -1,18 +1,19 @@
 package com.my.nio;
 
-import sun.misc.GC;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.*;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.SocketChannel;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
 
+/**
+ * https://www.jianshu.com/p/dfd940e7fca2
+ * https://juejin.im/post/6844904200141438984
+ */
 public class MainClass {
 
     static byte[] bs = new byte[1024];
